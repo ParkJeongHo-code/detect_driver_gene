@@ -334,9 +334,7 @@ class make_input():
         new_train['gene_symbol']=gene_syms
         col_l_2.insert(1,'gene_symbol')
         new_train=new_train.loc[:,col_l_2]
-        new_train.to_csv(inputs['save_dir']+dis_name+'_for_git_middle_step.csv')
 
-        print('data_save')
         print(new_train)
 
 
@@ -417,6 +415,7 @@ class make_input():
         print(last_data_protein.shape)
 
         last_data_protein.to_csv(inputs['save_dir']+dis_name+'_input_data.csv')
+        print('data_save')
 
         
     def gene_to_ensembl(self,data,re_dict):
@@ -575,11 +574,11 @@ class make_input():
 
         print('end step 1')
         if base_dir_out[-1]=='/':
-            data_muta_last_2.to_csv(base_dir_out+disease_name+"_exp_muta_concat.csv",index=False)
-            step_data_dir=base_dir_out+disease_name+"_exp_muta_concat.csv"
+            data_muta_last_2.to_csv(base_dir_out+disease_name+"_step_1.csv",index=False)
+            step_data_dir=base_dir_out+disease_name+"_step_1.csv"
         else:
-            data_muta_last_2.to_csv(base_dir_out+'/'+disease_name+"_exp_muta_concat.csv",index=False)
-            step_data_dir=base_dir_out+'/'+disease_name+"_exp_muta_concat.csv"
+            data_muta_last_2.to_csv(base_dir_out+'/'+disease_name+"_step_1.csv",index=False)
+            step_data_dir=base_dir_out+'/'+disease_name+"_step_1.csv"
             base_dir_out=base_dir_out+'/'
         print('start data_preprocessor_step2')
 
