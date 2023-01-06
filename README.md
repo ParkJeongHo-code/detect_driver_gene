@@ -35,7 +35,7 @@ cancer_name argument is meaning TCGA cancer name.(One of the following: BRCA, PA
 when you have one dataset and you want to seperate the dataset by train and test,don't use test_data_directory argument, and use only data_directory argument. 
 we divide train,test dataset by 3 fold stratified cross validation. So we make three dataset. by using 3 fold stratified cross validation, you can get three model by one dataset.
 ### example 
-    python3 DriverDNN_training.py -cancer_name BRCA -data_directory sample_data/TCGA_sample_BRCA_input.csv -lr 0.001 -epoch 10 -batch 64 -early_stop 5 -result_folder_name result 
+    python3 DriverDNN_training.py -cancer_name BRCA -data_directory sample_preprocessed_file/BRCA_input_data.csv -lr 0.001 -epoch 100 -batch 64 -early_stop 15 -result_folder_name result 
 
 ### 3.lr
 lr is meaning learning rate of model training.
